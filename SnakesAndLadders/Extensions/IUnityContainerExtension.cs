@@ -18,7 +18,7 @@ namespace SnakesAndLadders.Extensions
             container.RegisterInstance<IDice>(new DefaultDice());
             container.RegisterInstance<IBoard>(new DefaultBoard(boardSize));
             container.RegisterType<IPlayerService, PlayerService>();
-            container.RegisterSingleton<IGame, Game>();
+            container.RegisterType<IGame, Game>();
 
             return container;
         }
